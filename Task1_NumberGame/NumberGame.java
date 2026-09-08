@@ -7,6 +7,8 @@ public class NumberGame {
         Random rand = new Random();
 
         boolean playAgain = true ; 
+        int maxAttempts = 7; 
+        int score = 0; 
 
       while (playAgain) {    
         int numberToGuess = rand.nextInt(100) + 1; // 1 to 100
@@ -16,7 +18,7 @@ public class NumberGame {
         System.out.println("Welcome to the Number Game!");
         System.out.println("Guess a number between 1 and 100: ");
 
-        while (userGuess != numberToGuess) {
+        while (userGuess != numberToGuess && attempts < maxAttempts) {
             userGuess = sc.nextInt();
             attempts++;
 
@@ -27,9 +29,23 @@ public class NumberGame {
             } else {
                 System.out.println("*** Correct! *** The number was " + numberToGuess);
                 System.out.println("You guessed it in " + attempts + " attempts!");
+                score += Math.max(maxAttempts - attempts + 1, 1);
             }
+       
+        
+        if (userGuess != numberToGuess) {
+            System.out.println("Attempts! remaning :  " + (maxAttempts - attempts));
         }
-        System.out.print("Do you want to play again? (yes/no)");
+       
+    }   
+        if (userGuess != numberToGuess) {
+            System.out.println("Out of attempts! The number was " + numberToGuess);
+
+        }  
+       
+        System.out.println("Your Currrent Score : " + score);
+       
+        System.out.print("Do you want to play again? (yes/no) ");
         String choice = sc.next();
         if(!choice.equalsIgnoreCase("yes")) {
             playAgain = false;
