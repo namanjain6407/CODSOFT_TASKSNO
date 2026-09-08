@@ -7,6 +7,11 @@ class StudentGradeCalculator {
         System.out.print("Enter Number of the Subjects: ");
         int subjects =  sc.nextInt();
 
+        while (subjects <= 0) {                                      
+        System.out.print("Number of subjects must be at least 1. Enter again: ");
+        subjects = sc.nextInt();
+    }
+
         int totalMarks = 0;
 
         for(int i = 1; i <= subjects; i++) {
