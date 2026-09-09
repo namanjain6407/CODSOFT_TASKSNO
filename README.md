@@ -8,7 +8,7 @@ This repository contains my tasks and projects completed as part of the **CodSof
 | ------ | ---------------------------------- | ----------- |
 | Task 1 | Number Game                        | ✅ Completed |
 | Task 2 | Student Grade Calculator           | ✅ Completed |
-| Task 3 | ATM Interface                      | ⏳ Pending   |
+| Task 3 | ATM Interface                      | ✅ Completed |
 | Task 4 | Quiz Application with Timer        | ⏳ Pending   |
 | Task 5 | Student Course Registration System | ⏳ Pending   |
 
